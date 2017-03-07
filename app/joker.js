@@ -77,7 +77,7 @@ const actions = {
   },
   getResponse({context, entities}) {
 	  var response = firstEntityValue(entities, 'sentiment');
-	  console.log(response)
+	  //console.log(response)
 	  if(response == 'positive'){
 		  context.response = "Thanks!"
 	  }else{
@@ -122,7 +122,7 @@ const actions = {
 			
 			req.end();
 			req.on('error', function(e){
-				console.log(e);
+				//console.log(e);
 				context.joke = "Im not feeling funny today"
 				return resolve(context);
 			});  
